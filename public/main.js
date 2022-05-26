@@ -1,5 +1,6 @@
 var thumbUp = document.getElementsByClassName("fa-thumbs-up");
 var trash = document.getElementsByClassName("fa-trash");
+var thumbDown = document.getElementsByClassName("fa-thumbs-down");
 
 Array.from(thumbUp).forEach(function(element) {
       element.addEventListener('click', function(){
@@ -13,6 +14,36 @@ Array.from(thumbUp).forEach(function(element) {
             'name': name,
             'msg': msg,
             'thumbUp':thumbUp
+          })
+        })
+        .then(response => {
+          if (response.ok) return response.json()
+        })
+        .then(data => {
+          console.log(data)
+          window.location.reload(true)
+        })
+      });
+});
+
+Array.from(thumbDown).forEach(function(element) {
+  // turn node list into array
+      element.addEventListener('click', function(){
+        //add event listener to each traschcan
+        
+        const name = this.parentNode.parentNode.childNodes[1].innerText
+        //grab the name
+        const msg = this.parentNode.parentNode.childNodes[3].innerText
+        // grab the message
+        const thumbDown = parseFloat(this.parentNode.parentNode.childNodes[5].innerText)
+        fetch('messagesDown', {
+          method: 'put',
+          headers: {'Content-Type': 'application/json'},
+          body: JSON.stringify({
+            'name': name,
+            'msg': msg,
+            'thumbUp':thumbDown
+            // calling on the same property with a different value
           })
         })
         .then(response => {
