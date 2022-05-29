@@ -1,6 +1,63 @@
 body{
-  background: red;
+  background-color: #f79b83;
+  background-image: linear-gradient(315deg, #f79b83 0%, #fbc6b6 74%);
 }
 h3{
   margin-top: 40px;
+}
+h1{
+  text-align: center;
+  color: rgb(6, 6, 6);
+  font-family: 'Source Sans Pro', sans-serif;
+}
+form{
+  align-items: center;
+  border-radius: 20px;
+  height:40px;
+  float:right;
+}
+button{
+  color:black;
+  background: #f79b83;
+  height:30px;
+  margin-top:20px;
+  border-radius: 20px;
+  width:20%;
+}
+button:hover{
+  color:#f79b83;
+  height:30px;
+  border-radius: 20px;
+  width:10%;
+  background:black;
+}
+.messages{
+  font-family: 'Roboto Condensed', sans-serif;
+  list-style: circle;
+  font-size: 15px;
+  color:rgb(2, 2, 47);
+}
+ul li {
+  padding:5px;
+}
+h3{
+  margin-left:60px;
+  color:rgb(1, 1, 86);
+}
+.top{
+  font-family: 'Tiro Devanagari Marathi', serif;
+  margin-left: 250px;
+  color: rgb(53, 53, 53);
+}
+.bottom{
+  font-family: 'Tiro Devanagari Marathi', serif;
+  margin-left: 500px;
+  color: rgb(53, 53, 53);
+}
+.container{
+  margin-left: 310px;
+  width: 60%;
+  height:800px;
+  background: rgb(234, 233, 233);
+  border-radius: 20px;
 }

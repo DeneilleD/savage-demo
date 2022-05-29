@@ -6,34 +6,38 @@
   <link rel="shortcut icon" href="favicon.ico">
   <link rel="stylesheet" href="font-awesome.min.css">
   <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Beau+Rivage&family=Dancing+Script&family=Pacifico&family=Playfair+Display:ital@1&family=Roboto+Condensed&family=Source+Sans+Pro:wght@200&family=Square+Peg&family=Tapestry&family=Tiro+Devanagari+Marathi&display=swap" rel="stylesheet">
 </head>
 <body>
-  <h1>21 Savage</h1>
-  <h2>Why you trappin so hard?</h2>
+  <section class="container">
+    <h1>21 Savage</h1>
+    <h2 class="top">Why you trappin so hard?</h2>
 
 
-  <h3>Messages</h3>
-  <ul class="messages">
-  <% for(var i=0; i<messages.length; i++) {%>
-    <li class="message">
-      <span><%= messages[i].name %></span>
-      <span><%= messages[i].msg %></span>
-      <span><%= messages[i].thumbUp %></span>
-      <span><i class="fa fa-thumbs-up" aria-hidden="true"></i></span>
-      <span><i class="fa fa-thumbs-down" aria-hidden="true"></i></span>
-      <span><i class="fa fa-trash" aria-hidden="true"></i></span>
-    </li>
-  <% } %>
-  </ul>
+    <h3>Messages</h3>
+    <ul class="messages">
+    <% for(var i=0; i<messages.length; i++) {%>
+      <li class="message">
+        <span><%= messages[i].name %></span>
+        <span><%= messages[i].msg %></span>
+        <span><%= messages[i].thumbUp %></span>
+        <span><i class="fa fa-thumbs-up" aria-hidden="true"></i></span>
+        <span><i class="fa fa-thumbs-down" aria-hidden="true"></i></span>
+        <span><i class="fa fa-trash" aria-hidden="true"></i></span>
+      </li>
+    <% } %>
+    </ul>
 
-  <h2>Add a message</h2>
+    <h2 class="bottom">Add a message</h2>
 
-  <form action="/messages" method="POST">
-    <input type="text" placeholder="name" name="name">
-    <input type="text" placeholder="message" name="msg">
-    <button type="submit">Submit</button>
-  </form>
-
+    <form action="/messages" method="POST">
+      <input type="text" placeholder="name" name="name">
+      <input type="text" placeholder="message" name="msg">
+      <button type="submit">Submit</button>
+    </form>
+  </section>
   <script src="main.js"></script>
 
 </body>
